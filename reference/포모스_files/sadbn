@@ -1,0 +1,163 @@
+	var wp_htypes= '';
+	var wp_rcBody= '';
+	var ad_base= '';
+	var wp_sky_open=false;
+	var wp_brandlinkid='adbn_sky_listener';
+    var mobParam = "from=&s=21454";
+	if(mobParam.indexOf('{param}') == -1) enliple_param = mobParam;
+	/* UtileMethod */
+	function wp_createElement(tname, tid){
+		var elem= document.createElement(tname);
+		elem.id= tid;
+        elem.style = 'text-align:center;';
+		return elem;
+	}
+	function wp_createScript(src, fnOnReadyStateChange, fnOnLoad) {
+		var sc=document.createElement('script');
+		sc.type='text/javascript';
+		sc.charset='euc-kr';
+		sc.onreadystatechange=fnOnReadyStateChange
+		sc.onload=fnOnLoad;
+		sc.src=src;
+		return sc;
+	}
+	function wp_addEvent(obj, type, listener) {
+		if (window.addEventListener){
+			obj.addEventListener(type, listener, false);
+		} else {
+			obj.attachEvent('on'+type, listener);
+		}
+	}
+	function wp_getScrollTop() {
+		var scrOfY = 0
+		if (typeof(window.pageYOffset) == 'number') {
+			scrOfY = window.pageYOffset;
+	
+		}else if (document.documentElement && document.documentElement.scrollTop) {
+			scrOfY = document.documentElement.scrollTop;
+	
+		}else if (document.body && document.body.scrollTop) {
+			scrOfY = document.body.scrollTop;
+		}
+		return scrOfY;
+	}
+	function wp_getScrollHeight(){
+		var scrollHeight = document.compatMode == 'CSS1Compat' ? document.documentElement.scrollHeight : document.body.scrollHeight;
+		if( enliple_param.indexOf("&s=6953")>-1 ) {				// ?????? ????
+			scrollHeight = document.querySelectorAll('#bodyWrapper')[0].scrollHeight;
+		}
+		return scrollHeight;
+	}
+	function wp_getClientHeigth() {
+		return document.compatMode=='CSS1Compat'? document.documentElement.clientHeight : document.body.clientHeight; 
+	}
+	function wp_req(sUrl, fnSuccess, fnFail) {
+		
+	}
+	/* ControlMethod */
+	function wp_checkLoadImage(){			//	?? ????? Document ??
+		var rcAdStr='';
+		if (wp_htypes=='script'){
+			document.getElementById( wp_brandlinkid ).innerHTML="<sc"+"ript src='"+wp_rcBody+"'></sc"+"ript>";
+		}else{
+			try {
+				if(wp_rcBody!='')	rcAdStr+=wp_rcBody;
+				if(rcAdStr!=''){
+					document.getElementById( wp_brandlinkid ).innerHTML=rcAdStr;
+				}
+			} catch(e) {
+			}
+		}
+	}
+	
+	function wp_display(iframeHeight){
+		var iframeName = 'widthPang';
+		var widthPang=document.getElementById( iframeName );
+		widthPang.height=0;
+		widthPang.width= '100%';
+
+		var fnSetHeightOfWidthPang = function(height) {
+			setTimeout(function(){
+				widthPang.height = height;
+				scrollTo(0, wp_getScrollHeight());
+			}, 1);
+		}
+		
+		var fnSetAniHeightOfWidthPang = function (height) {
+			jQuery("#"+ iframeName).animate({height:height}, 
+					{duration: 1000,
+					 step		 : function(){	scrollTo(0, wp_getScrollHeight());	}, 
+					 complete: function(){	scrollTo(0,  wp_getScrollHeight());	}		});
+		}
+		
+		
+		if( enliple_param.indexOf("&s=1043")>-1 ) {					// ???? ????
+			fnSetHeightOfWidthPang(iframeHeight);
+		}else{
+			try {
+				fnSetAniHeightOfWidthPang(iframeHeight);
+			}catch(e) {
+				fnSetHeightOfWidthPang(iframeHeight);
+			}
+		}
+
+	}
+	
+	function wp_loadListener() {
+		/* add script section */
+		if( enliple_param.indexOf("&s=6953")>-1 ) {					// ?????? ????
+			document.querySelectorAll('#bodyWrapper')[0].appendChild(wp_createElement('div', wp_brandlinkid ));
+		}else{
+			document.getElementsByTagName('body')[0].appendChild(wp_createElement('div', wp_brandlinkid ));
+		}
+		
+		var fnOnScroll = function() { 
+			var scrollTop = wp_getScrollTop();
+			var clientHeight = wp_getClientHeigth();
+			var scrollHeight = wp_getScrollHeight();
+			/* define scroll hight */
+			var scrollPos= parseInt(scrollHeight) - parseInt(scrollTop); 
+	
+			/* define bottom */
+			var roundFoot = 500;
+			if( enliple_param.indexOf("&s=1043")>-1 || enliple_param.indexOf("&s=6953")>-1 ) {				// ????, ?????? ????
+				roundFoot = 10;
+			}else if (enliple_param.indexOf("&s=4519")>-1 ) {		// ???? ????
+				roundFoot = 600;
+			}else if (enliple_param.indexOf("&s=14637")>-1 || enliple_param.indexOf("&s=12902")>-1 || enliple_param.indexOf("&s=14638")>-1 ) {		// ??? ?? ????
+				roundFoot = 1000;
+			}
+
+			if( clientHeight >= scrollPos-roundFoot ) {
+				if( wp_sky_open == false ){ 
+					wp_sky_open=true; 
+					var ld=false;
+					
+					function receiveMessage(event) {
+						if (event.origin.split("//")[1] !== "www.mediacategory.com") 	return;
+						if (event.data === undefined 
+								|| event.data.iframe === undefined 
+								|| event.data.iframe.height === undefined)		return;
+						
+						wp_display(event.data.iframe.height);
+					} 
+					
+					if ('addEventListener' in window) { 
+						window.addEventListener('message', receiveMessage, false); 
+					} else if ('attachEvent' in window) {	//IE 
+						window.attachEvent('onmessage', receiveMessage);
+					} 
+					
+					document.getElementById( wp_brandlinkid ).innerHTML = "<iframe name='widthPang' id='widthPang' src='//www.mediacategory.com/servlet/sadbnFrame?" + enliple_param  +"' marginheight='0' marginwidth='0' scrolling='no' width='1200px' height='0px' frameborder='0'></iframe>";
+				}
+			} 
+		};
+		
+		wp_addEvent(window, 'scroll', fnOnScroll);
+	}
+	
+	
+	
+	wp_loadListener();
+
+

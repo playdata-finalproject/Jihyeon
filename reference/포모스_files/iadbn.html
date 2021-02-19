@@ -1,0 +1,121 @@
+
+<!-- saved from url=(0065)https://www.mediacategory.com/servlet/iadbn?from=&s=349741&psb=99 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <script type="text/javascript" src="./jquery-1.6.2.min.js.&#45796;&#50868;&#47196;&#46300;"></script>
+    <script src="./jquery-1.9.1.min.js.&#45796;&#50868;&#47196;&#46300;"></script>
+    <script src="./mobonStorage.js.&#45796;&#50868;&#47196;&#46300;"></script>
+
+    <script type="text/javascript">
+        var Browser = {chk: navigator.userAgent.toLowerCase()};
+        Browser = {
+            ie: Browser.chk.indexOf('msie') != -1,
+            ie6: Browser.chk.indexOf('msie 6') != -1,
+            ie7: Browser.chk.indexOf('msie 7') != -1,
+            ie8: Browser.chk.indexOf('msie 8') != -1,
+            ie9: Browser.chk.indexOf('msie 9') != -1,
+            ie10: Browser.chk.indexOf('msie 10') != -1,
+            ie12: Browser.chk.indexOf('edge/') != -1,
+
+            opera: !!window.opera,
+            safari: Browser.chk.indexOf('safari') != -1,
+            safari3: Browser.chk.indexOf('applewebkir/5') != -1,
+            mac: Browser.chk.indexOf('mac') != -1,
+            chrome: Browser.chk.indexOf('chrome') != -1,
+            firefox: Browser.chk.indexOf('firefox') != -1
+        },
+            p = function () {
+                var e = navigator.userAgent.toLowerCase(),
+                    t = {
+                        webkit: /webkit/.test(e),
+                        mozilla: /mozilla/.test(e) && !/(compatible|webkit)/.test(e),
+                        chrome: /chrome/.test(e),
+                        msie: /windows/.test(e) && !/opera/.test(e),
+                        firefox: /firefox/.test(e),
+                        safari: /safari/.test(e) && !/chrome/.test(e),
+                        opera: /opera/.test(e)
+                    };
+                return t.version = t.safari ? (e.match(/.+(?:ri)[\/: ]([\d.]+)/) || [])[1] : (e.match(/.+(?:ox|me|ra|ie)[\/: ]([\d.]+)/) || [])[1], t
+            }();
+
+        var s = "349741",
+            returnUrl = "",
+            ico_drc = "https://www.mediacategory.com/servlet/icoDrc?site_code=b30ffcca378a44bab7ab69841b573ddb&s=349741&au_id=0ef2390718cfea65748b941a1763d7303094fae&adgubun=RC&userid=fastcampus&pcode=203525&smPcode=&mgubun=&mcgb=&freqLog=0&hId=97&abt=A01|B29|D06|AO79|AL13|R47|AG35|AN94|W02|AK72|AC10|H96|C37|P90|K32|N51|TB97|AM29|Y93|AI05|AA08|AB06|AF02|AH22|AD01|AE42&no=0&kno=0&kwrdSeq=0&fromApp=N&targetingTime=20210202182011&slink=https%3A%2F%2Fwww.fastcampus.co.kr%2Fdev_online_javaend%3Ffbclid%3DIwAR0z4XbQalHAWY04SXmFycG2MMVouAI156Et3Jay8OhoWPnWVL3CVoIlaC8%26utm_source%3Dmobion%26utm_medium%3Dicover_f%26utm_campaign%3Dpc%26utm_content%3D200728_pc_re",
+            fq = 300,
+            icowebapp    = false,
+            windowsclose = false,
+
+            returnUrlLanding = function () {
+                //???ø? ????(19766,18251,20340)
+                if (returnUrl != "" && (s == "19766" || s == "18251" || s == "20340")) {
+                    top.location.replace(decodeURIComponent(returnUrl));
+                }
+            },
+            icoDrcLandingLoc = function () {
+                top.location.replace(ico_drc + "&fq=" + fq);
+                $(opener).focus();
+                $(document).blur();
+              };
+
+        $(document).ready(function () {
+            var mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
+            for (var info in mobileKeyWords) {
+                if (navigator.userAgent.match(mobileKeyWords[info]) != null) return;
+            }
+            if (navigator.userAgent.indexOf("59.0.3071.115") != -1) return;
+            if (p.firefox) return;
+
+            /*???????? ???????? 2?????? ??û 2017/04/04  by ghcho*/
+            if (s == '10020' || s == '4685') fq = 60 * 2;
+            /*???????? ???????? 3?ð? ??û 2020/05/14*/
+            else if (s == '75847' ) fq = 60 * 60 * 3;
+            /*????????? ???????? 15?? ??û 2020/05/26*/
+            else if (s == '370889') fq = 60 * 15;
+
+            if (ico_drc) {
+                if (Browser.ie12) {
+                    /* ie12 (??????10)?? ????????? ????? ???? */
+                    returnUrlLanding();
+                } else if ((Browser.safari && !Browser.chrome) || Browser.safari3 || Browser.mac) {
+                    /* safari, mac?? ????????? ????????? */
+                } else if (Browser.chrome || navigator.appVersion.indexOf('Chrome') != -1) {
+                    if (icowebapp) {
+                        icoDrcLandingLoc();
+                    } else {
+                        var r = window.open(ico_drc + "&fq=" + fq, "_blank", "width=1024,height=768,scrollbars=yes,menubar=yes,location=yes,toolbar=yes,resizable=yes");
+                        if (r != null) {
+                            var tmp = window.open('about:blank');
+                            tmp.focus();
+                            tmp.close();
+                            setTimeout(function () {
+                                try {
+                                    tmp = window.open('about:blank');
+                                    tmp.focus();
+                                    tmp.close();
+                                } catch (e) {
+                                }
+                            }, 500);
+                        }
+                    }
+                } else {
+                    if (icowebapp) {
+                        icoDrcLandingLoc();
+                    } else {
+                        setTimeout(function () {
+                            window.open("//www.mediacategory.com/mediaCategory/externalcontent/ico/pop.html?fq=" + fq + "&openURL=" + encodeURIComponent(ico_drc), "pop", "width=1024,height=768,scrollbars=yes,menubar=yes,location=yes,toolbar=yes,resizable=yes");
+                        }, 1000);
+                    }
+                }
+            } else {
+                if (icowebapp) {
+                    if (windowsclose) window.open('about:blank', '_parent').parent.close();
+                    returnUrlLanding();
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+
+ 
+</body></html>
