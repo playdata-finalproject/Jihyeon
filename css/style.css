@@ -17,6 +17,14 @@ a{
     color:var(--logo-color);
 }
 
+
+.background_area.customer{
+    height: 445px;
+    background: url(../img/background.PNG) no-repeat center bottom;
+    background-size: 100% 100%;
+}
+
+
 .navbar{
     display:flex;
     justify-content: space-between;
@@ -72,6 +80,63 @@ a{
     font-size:24px;
     color : var(--toggle-color);
 }
+
+/*첫 화면 */
+
+
+
+
+
+/*순위글*/
+.board_main {
+    align-items: center;
+    position:relative;
+    margin-bottom: 20px;
+    padding-bottom:20px;
+}
+.board_main .left h3{
+    background-color: #b12e30;
+}
+.board_main .right h3{
+    background-color: #393939;
+}
+.board_main h3{
+    height:42px;
+    line-height:42px;
+    color:#fff;
+    padding-left:24px;
+}
+.board_main .postbox{
+	float:left;
+	width:364px;
+}
+
+.board_main .left
+.bm_list{
+	background-color:#ebebeb;
+	padding: 24px 24px 24px 14px;
+}
+.ranking li {
+    padding : 8px 12px;
+}
+.board_main .right
+.bm_list{
+	background-color:#f3f3f3;
+	padding: 24px 24px 24px 14px;
+}
+.board_main .ranking
+.num {
+    color:#b12e30;
+    font-weight:bold;
+}
+.ranking li .num{
+    display:inline-block;
+    width : 30px;
+    text-align:center;
+}
+
+
+
 
 @media screen and (max-width:768px){
     .navbar {

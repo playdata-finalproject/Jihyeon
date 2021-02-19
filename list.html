@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title> 게시판 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <script
+        src="https://kit.fontawesome.com/2d323a629b.js"
+        crossorigin = "anonymous"
+    ></script>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/common.js"></script>  
+<script src="js/jquery.smooth-scroll.min.js"></script> 
+
+<script src = "js/main.js" defer></script>
+<!--[if lte IE 9]>
+    <script src="js/html5shiv.js"></script>
+	<script src="js/placeholders.min.js"></script>
+<![endif]-->
+</head>
+
+
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fas fa-baby"></i>
+            <a href="">코린이 대피소</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="Language">언어게시판</a></li>
+            <li><a href="Eror">에러 모음집</a></li>
+            <li><a href="Best">Best 게시글</a></li>
+            <li><a href="Career">취업 정보</a></li>
+            <li><a href="Regular">연구/회사원</a></li>
+            <li><a href="Question">Q&A</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            <li><a href="Si"><i class="fas fa-sign-in-alt"></i></a></li>
+            <li><a href="Google"><i class="fab fa-google"></i></a></li>
+            <li><a href="Github"><i class="fab fa-github"></i></a></li>
+        </ul>
+        <a href="#" class = "navbar_toogleBtn">
+            <i class="fas fa-list"></i>
+        </a>
+    </nav>
+<ul class="skipnavi">
+    <li><a href="#container">본문내용</a></li>
+</ul>
+<!-- wrap -->
+
+<div id="container">
+    <!-- location_area -->
+    <div class="location_area customer">
+        <div class="box_inner">
+            <h2 class="tit_page">Best 게시글 <span class="in">in</span> 코린이 대피소</h2>
+        </div>
+    </div>		
+    <!-- //location_area -->
+
+    <!-- bodytext_area -->
+    
+    
+    
+    <div class="bodytext_area box_inner">
+        <div class = "board_main">
+            <div class = "postbox left">
+                <h3>주간 인기</h3>
+                <div class="bm_list">
+                    <ul class = "ranking">
+                        <li>
+                            <span class="num">1</span>
+                            <a href="#">개발자가 갖추어야 할 9가지 기술</a>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <a href="#">알고리즘과 자료구조 파헤치기</a>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <a href="#">CS 기술 면접 가이드</a>
+                        </li>
+                        <li>
+                            <span class="num">4</span>
+                            <a href="#">애자일 방법론의 기초</a>
+                        </li>
+                        <li>
+                            <span class="num">5</span>
+                            <a href="#">클린코드 그리고 리팩토링</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+            <div class = "postbox right">
+                <h3>월간 인기</h3>
+                <div class="bm_list">
+                    <ul class = "ranking">
+                        <li>
+                            <span class="num">1</span>
+                            <a href="#">개발자가 갖추어야 할 9가지 기술</a>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <a href="#">알고리즘과 자료구조 파헤치기</a>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <a href="#">CS 기술 면접 가이드</a>
+                        </li>
+                        <li>
+                            <span class="num">4</span>
+                            <a href="#">애자일 방법론의 기초</a>
+                        </li>
+                        <li>
+                            <span class="num">5</span>
+                            <a href="#">클린코드 그리고 리팩토링</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <form action="#" class="minisrch_form">
+            <fieldset>
+                <legend>검색</legend>
+                <input type="text" class="tbox" title="검색어를 입력해주세요" placeholder="검색어를 입력해주세요">
+                <a href="javascript:;" class="btn_srch">검색</a>
+            </fieldset>
+        </form>
+        <table class="bbsListTbl" summary="번호,제목,조회수,작성일 등을 제공하는 표">
+            <caption class="hdd">공지사항  목록</caption>
+            <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">조회수</th>
+                    <th scope="col">작성일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9</td>
+                    <td class="tit_notice"><a href="javascript:;">비전공 개발자의 개발 스토리</a> </td>
+                    <td>21</td>
+                    <td>2021-03-01</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="tit_notice"><a href="javascript:;">알고리즘과 자료구조 파헤치기</a> </td>
+                    <td>18</td>
+                    <td>2021-02-18</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="tit_notice"><a href="javascript:;">개발자 3년차의 늪을 헤쳐나오는 방법</a> </td>
+                    <td>16</td>
+                    <td>2021-01-05</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="tit_notice"><a href="javascript:;">애자일 방법론의 기초</a> </td>
+                    <td>13</td>
+                    <td>2021-01-01</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="tit_notice"><a href="javascript:;">Python Vs Java Vs C++</a> </td>
+                    <td>31</td>
+                    <td>2020-12-25</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="tit_notice"><a href="javascript:;">클린 코드 그리고 리팩토링</a> </td>
+                    <td>112</td>
+                    <td>2020-11-27</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="tit_notice"><a href="javascript:;">CS 기술 면접 가이드</a> </td>
+                    <td>334</td>
+                    <td>2020-11-23</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="tit_notice"><a href="javascript:;">개발자 포트폴리오 구축하기</a> </td>
+                    <td>345</td>
+                    <td>2020-11-21</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="tit_notice"><a href="javascript:;">개발자가 갖추어야할 9가지 기술</a> </td>
+                    <td>102</td>
+                    <td>2020-11-02</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="btn_line txt_right">
+            <a href="javascript:;" class="btn_bbs">글쓰기</a>
+        </p>
+        <!-- pagination -->
+        <div class="pagination">
+            <a href="javascript:;" class="firstpage  pbtn"><img src="img/btn_firstpage.png" alt="첫 페이지로 이동"></a>
+            <a href="javascript:;" class="prevpage  pbtn"><img src="img/btn_prevpage.png" alt="이전 페이지로 이동"></a>
+            <a href="javascript:;"><span class="pagenum currentpage">1</span></a>
+            <a href="javascript:;"><span class="pagenum">2</span></a>
+            <a href="javascript:;"><span class="pagenum">3</span></a>
+            <a href="javascript:;"><span class="pagenum">4</span></a>
+            <a href="javascript:;"><span class="pagenum">5</span></a>
+            <a href="javascript:;" class="nextpage  pbtn"><img src="img/btn_nextpage.png" alt="다음 페이지로 이동"></a>
+            <a href="javascript:;" class="lastpage  pbtn"><img src="img/btn_lastpage.png" alt="마지막 페이지로 이동"></a>
+        </div>
+        <!-- //pagination -->
+        
+    </div>
+    <!-- //bodytext_area -->
+
+</div>
+<!-- //container -->
+
+<footer>
+    <div class="foot_area box_inner">
+        <ul class="foot_list clear">
+            <li><a href="javascript:;">이용약관</a></li>
+            <li><a href="javascript:;">개인정보취급방침</a></li>
+        </ul>
+        <h2>코린이 대피소</h2>
+        <p class="addr">서울특별시 서초구 효령료 335, 1층 플레이데이터 <span class="gubun">/</span>        
+            <span class="br_line">대표전화 <span class="space0">02-1234-5678</span> <span class="gubun">/</span>        
+                <span class="br_line">E-mail : <span class="space0"> corin@corinshelter.com</span></span>
+            </span>
+        </p>
+        <p class="copy box_inner">Copyright(c) CorinShelter all right reserved</p>
+        <ul class="snslink clear">
+            <li><a href="javascript:;">blog</a></li>
+            <li><a href="javascript:;">facebook</a></li>
+            <li><a href="javascript:;">instargram</a></li>
+        </ul>
+    </div>
+</footer>
+
+<h2 class="hdd">빠른 링크 : 전화 문의,카카오톡,오시는 길,꼭대기로</h2>
+<div class="quick_area">
+	<ul class="quick_list">
+		<li><a href="tel:010-7184-4403"><h3>스터디 신청</h3></a></li>
+		<li><a href="javascript:;"><h3>멘토링 <em>상담</em></h3><p>1:1상담</p></a></li>
+		<li><a href="javascript:;"><h3 class="to_contact">이력서 작성</h3></a></li>
+	</ul>
+	<p class="to_top"><a href="#layout0" class="s_point">TOP</a></p>
+</div>
+
+</body>
+</html>
