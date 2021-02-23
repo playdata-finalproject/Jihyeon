@@ -1,0 +1,206 @@
+.pointer{
+	cursor: pointer;
+}
+div, span, input{
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/** 동문카드 혜택 **/
+.pay_wrap{
+	margin-top: 60px;
+}
+.card_btnBox{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 80px;
+}
+.card_btns{
+	width:180px;
+	height:40px;
+	background-color: #507250 ;
+	color: #fff;
+	border:0;
+	margin-right: 30px;
+}
+.card_btns:hover{
+	background-color: #3b603b;
+}
+
+.pay_row{
+	display: table;
+	width: 100%;
+	height:55px;
+	font-size: 14px;
+	color: #666666;
+	border-bottom: 1px solid #cbd3cf;
+}
+.pay_row:nth-child(1){
+	height:60px;
+	text-align: center;
+	border-top: 3px solid #092f19;
+}
+.pay_cont{
+	display: table-cell;
+	vertical-align: middle;
+
+}
+.pay_cont1{
+	width:210px;
+	color: #092f19;
+	padding-left: 50px;
+}
+.pay_cont2{
+	width:450px;
+}
+.pay_cont3{
+	width:90px;
+}
+.pay_cont4{
+	width:180px;
+	text-align: center;
+}
+.pay_cont4 input{
+	width: 140px;
+	height: 40px;
+	background-color: #507250 ;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+
+}
+.pay_cont4 input:hover{
+	background-color: #3b603b ;
+}
+
+/**납부페이지**/
+.pay_form_wrap{
+	margin-top: 65px;
+}
+.pay_form_wrap span{
+	color: #f40b42 ;
+}
+.pay_text{
+	margin-bottom: 10px;
+	font-size: 15px;
+	color: #606060;
+}
+.w_155{
+	width: 155px;
+}
+.w_180{
+	width:180px;
+}
+.w_368{
+	width: 368px;
+}
+.pay_text{
+	width: 100%;
+	text-align: right;
+}
+.pay_form_box{
+	padding-left: 190px;
+	border-top: 3px solid #092f19;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	margin-bottom: 25px;
+	border-bottom: 1px solid #cbd3cf;
+}
+
+.form{
+	display: table;
+	height: 45px;
+	
+	width: 100%;
+	margin-bottom: 10px;
+}
+.pay_form_box input[type="text"]{
+	height: 100%;
+	border:1px solid #cbd3cf;
+	border-radius: 2px;
+	padding-left: 10px;
+	font-size: 13px;
+	color: #666666;
+}
+.form_name, .form_box{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.form_name{
+	width:160px;
+	font-size: 14px;
+	color: #666666;
+}
+.form_description{
+	padding-left: 160px;
+	font-size: 12px;
+	color: #959b98;
+	margin-bottom: 10px;
+	margin-top: -5px;
+}
+.p_relative{
+	position: relative;
+}
+.pay_select{
+	height: 100%;
+	padding-left:10px; 
+	border:1px solid #cbd3cf;
+	color: #666666;
+
+	-webkit-appearance: none; 
+	-moz-appearance: none;    
+	appearance: none;
+	background: url('../imgs/news/img_select_down.png') no-repeat 95% 50%; /* 화살표 아이콘 추가 */ 
+}
+.select_line{
+	height:40px;
+	border-left: 1px solid #cbd3cf;
+	position: absolute;
+	left:142px;
+}
+
+.radio_box{
+	display: table;
+	height: 45px;
+	margin-bottom: 20px;
+	padding-left: 160px;
+	font-size: 13px;
+	color: #666666;
+}
+.radio_box_input{
+	display: table-cell;
+	vertical-align: middle;
+}
+.pay_btn_box{
+	text-align: center;
+}
+.pay_btn1, .pay_btn2{
+	margin-bottom: 80px;
+	border:0;
+	border-radius: 2px;
+	width:150px;
+	height:45px;
+	color: #fff;
+}
+.pay_btn1{
+	background-color: #092f19;
+	margin-right: 10px;
+}
+.pay_btn2{
+	background-color: #9fa5a2;
+}
+.pay_input1{
+	margin-right: 5px;
+}
+.radio_box_input:nth-child(1){
+	margin-right: 10px;
+}
+.chk_year{
+	margin-right: 5px;
+}
+.text_year{
+	margin-left: 26px;
+	margin-right: 10px;
+}

@@ -1,0 +1,633 @@
+
+input:focus, select:focus{
+  outline: none;
+}
+div, textarea, input, span{
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;  
+	box-sizing: border-box; 
+}
+.f_left{
+	float: left;
+}
+.pointer{
+	cursor: pointer;
+}
+/** 공지사항 **/
+.notice_searchMenu{
+	float: right;
+	margin-top: 45px;
+	margin-bottom: 15px;
+	
+}
+.notice_search{
+	float: left;
+	height: 40px;
+	margin-left: 10px;
+	font-size: 13px;
+	position: relative; 
+}
+.notice_s_select{
+	width:180px;
+	height: 40px;
+	padding-left: 20px;
+	border-radius: 2px;
+	color:#606d7f ;
+	border: 1px solid #cbd3cf;
+	-webkit-appearance: none; 
+	-moz-appearance: none;    
+	appearance: none;
+	background: url('/imgs/new_image//news/img_select_down.png') no-repeat 95% 50%; /* 화살표 아이콘 추가 */  
+	   
+}
+.select_line{
+	height:40px;
+	border-left: 1px solid #cbd3cf;
+	position: absolute;
+	left:142px;
+}
+select::-ms-expand { display: none; }/*ie 셀렉박스 화살표 숨기기*/
+
+.notice_s_input{
+	width:220px;
+	height: 40px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border: 1px solid #cbd3cf;
+	border-radius: 2px;
+	color:#666666;
+}
+.notice_s_btn{
+	width:100px;
+	height: 100%;
+	border: 0;
+	color:#fff;
+	border-radius: 2px;
+	background-color: #606d7f ;
+}
+.notice_s_btn:hover{
+	background-color: #4b5868 ;
+}
+.notice_board_wrap{
+	clear: both;
+	width:932px;
+	
+}
+.board_row{
+	overflow: auto;
+	height: 40px;
+	border-bottom: 1px solid #cbd3cf;
+	color:#666666;
+	font-size: 14px;
+	overflow-y: hidden;
+	background-color: #fff;
+}
+.b_secret_img{
+	margin-right: 5px;
+}
+.b_secret_img,.b_attach_img, .b_new_img{
+	display: inline-block;
+}
+.b_secret_img img,.b_attach_img img, .b_new_img img{
+	margin:-3px 0;
+}
+.b_attach_img, .b_new_img, .board_reply{
+	margin-left: 5px;
+}
+.board_reply{
+	color:#808690;
+}
+.board_row_title{
+	text-align: center;
+	border-top: 3px solid #092f19;
+
+}
+.board_title_hover{
+	padding-left: 15px;
+	color:#666;
+}
+.board_title_hover:hover{
+	color:#444444;
+}
+.notice_board_title{
+	float: left;
+	height: 100%;
+	line-height: 40px;
+
+}
+.notice_board_title1{
+	width:90px;
+	text-align: center;
+
+}
+.notice_board_title2{
+	width:550px;
+}
+.notice_board_title3{
+	width:110px;
+	text-align: center;
+}
+.notice_board_title4{
+	width:90px;
+	text-align: center;
+}
+.notice_board_title5{
+	width:90px;
+	text-align: center;
+}
+
+.board_paging{
+	text-align: center;
+	width:932px;
+	margin-top:25px;
+	height:40px;
+}
+.paging_arrow_left, .paging_arrow_right, .paging_num_wrap, .b_paging_num{
+	display: inline-block;
+}
+.paging_arrow_left{
+	height: 40px;
+	width: 40px;
+	
+	background-image: url('/imgs/new_image//news/ic_page_prev_normal.png');
+	background-repeat: no-repeat;
+	float: left;
+}
+.paging_arrow_left:hover{
+	background-image: url('/imgs/new_image//news/ic_page_prev_hover.png');
+}
+.paging_arrow_right{
+	height: 40px;
+	width: 40px;
+	background-image: url('/imgs/new_image//news/ic_page_next_normal.png');
+	background-repeat: no-repeat;
+	float: left;
+}
+.paging_arrow_right:hover{
+	background-image: url('/imgs/new_image//news/ic_page_next_hover.png');
+}
+.paging_num_wrap{
+	float: left;
+	line-height: 42px;
+
+}
+.b_paging_num{
+	width:40px;
+	height: 40px;
+	color:#666666;
+}
+.b_paging_num:hover{
+	background-color: #efefef;
+}
+.b_paging_num_border{
+	border:1px solid #526359;
+}
+.paging_box{
+	margin: 0 auto;
+	height: 40px;
+	width:298px;
+}
+.board_margin_bottom{
+	margin-bottom: 15px;
+}
+
+/** 공지사항 admin **/
+.checkbox{
+	margin-left: -15px;
+	margin-right: 7px;
+}
+.check_all{
+	display: inline-block;
+    float: left;
+    margin: 12px 0 12px 0;
+}
+.admin_btn_wrap{
+	overflow: auto;
+	margin-top: 20px;
+}
+.admin_btn{
+	height:40px;
+	width:100px;
+	border-radius: 2px;
+	border: 0;
+	display: inline-block;
+	color:#fff;
+	font-size: 13px;
+}
+.admin_btn_left{
+	margin-right: 10px;
+	float: left;
+	background-color: #7c8389 ;
+}
+.admin_btn_left:hover{
+	background-color: #5a6166 ;
+}
+.admin_btn_right{
+	float: right;
+	background-color: #092f19  ;
+}
+.admin_btn_right:hover{
+	float: right;
+	background-color: #032310  ;
+}
+
+
+/** 동문회 소식 **/
+.news_wrap{
+	margin-top:60px;
+	border-top: 3px solid #092f19;
+}
+.news_row{
+	height:195px;
+	border-bottom: 1px solid #cbd3cf;
+	padding:30px 0 30px 0;
+	background-color: #fff;
+}
+.news_img{
+	float: left;
+	width:200px;
+	margin-right: 50px;
+}
+.news_text_wrap{
+	float: left;
+	width:660px;
+}
+.news_text_title{
+	color:#092f19;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+.news_text_title:hover{
+	color:#032310;
+}
+.news_text_cont{
+	color:#666666;
+	font-size: 13px;
+	margin-top: 15px;
+	line-height: 24px;
+}
+.news_text_cont:hover{
+	color:#444444;
+}
+
+/** 게시글 상세보기 **/
+.forum_wrap{
+	margin-top:60px;
+	border-top: 3px solid #092f19;
+}
+.read_title_wrap{
+	height:90px;
+	margin-bottom: 13px;
+	border-bottom: 1px solid #cbd3cf;
+}
+.read_title_left{
+	float: left;
+	width:755px;
+	margin: 26px 0 0 30px;
+	color:#666666;
+	font-size: 15px;
+	font-weight: bold;
+}
+.read_title{
+	margin-bottom: 8px;
+}
+.title_date{
+	color: #999999;
+	font-size: 11px;
+}
+.read_title_right{
+	float: right;
+	color: #666666;
+	font-size: 14px;
+	margin: 36px 30px 0 0;
+}
+.read_content{
+	padding: 0 30px 0 30px;
+	margin-bottom: 30px;
+	background-color: #fff;
+}
+.read_file_wrap{
+	text-align: right;
+	margin-bottom: 30px;
+	color:#666666;
+	font-size: 11px;
+}
+.file_btn:hover{
+	color:#092f19;
+}
+.read_cont_text{
+	line-height: 24px;
+	color:#666666;
+	font-size: 13px;
+}
+.read_file_wrap img{
+	margin:0px 4px -3px 20px;
+}
+.forum_arrow, .forum_move_text, .forum_move_title{
+	float: left;
+}
+.read_cont_img{
+	height:200px;
+	border: 1px solid gray;
+	margin-bottom:30px;
+}
+.forum_move_wrap{
+	overflow: auto;
+	height:55px;
+	border-top: 1px solid #cbd3cf;
+	color: #666666;
+	font-size: 14px;
+	background-color: #fff;
+}
+.forum_prev_wrap{
+	border-bottom: 1px solid #cbd3cf;
+}
+.forum_arrow{
+	width:20px;
+	height:20px;
+	margin: -3px 20px 0 30px;
+}
+.forum_arrow_up{
+	background-image: url('/imgs/new_image//news/ic_page_next2_hover.png');
+}
+.forum_arrow_down{
+	background-image: url('/imgs/new_image//news/ic_page_prev2_hover.png');
+}
+.forum_move_text{
+	margin-right: 40px;
+}
+.forum_move_title:hover{
+	color:#092f19;
+}
+.move_text_margin{
+	margin: 18px 0;
+}
+.forum_btn_wrap{
+	text-align: right;
+	margin-top: 25px;
+	height:45px;
+}
+.toListBtn{
+	height:100%;
+	width:100px;
+	border: 0;
+	background-color: #092f19;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 14px;
+}
+.toListBtn:hover{
+	background-color: #032310;
+}
+
+/** 댓글 **/
+.rep_wrap{
+	background-color: #f7f7f7;
+	border-top: 1px solid #cdb3cf;
+	padding: 25px 30px 0 30px;
+	overflow: auto;
+}
+.rep_top{
+	display: table;
+	margin-bottom: 20px;
+}
+.rep_name{
+	font-size: 14px;
+	color: #092f19;
+	display: table-cell;
+	vertical-align: bottom;
+	padding-right: 10px;
+	font-weight: bold;
+}
+.rep_date{
+	font-size: 12px;
+	color: #7f7f7f;
+	display: table-cell;
+	vertical-align: bottom;
+}
+.rep_text, .rep_rep_text{
+	font-size: 12px;
+	color: #666666;
+	margin-bottom: 20px;
+    line-height: 22px;
+}
+.rep{
+	border-top: 1px solid #b2b7b4;
+}
+.rep:nth-child(1){
+	border-top: 0
+}
+.rep_rep{
+	border-top: 1px solid #b2b7b4;
+	overflow: auto;
+	padding-top: 25px;
+}
+.rep_rep:nth-child(1){
+	border-top: 0
+}
+.rep_icon{
+	margin-top: -3px;
+}
+.rep_rep_box{
+	width: 96%;
+}
+.rep_bottom, .rep_rep_bottom{
+	text-align: right;
+	margin-bottom: 25px;
+
+}
+.rep_bottom input, .rep_rep_bottom input{
+	border:1px solid #cbd3cf;
+	border-radius: 2px;
+	background-color: #fff;
+	color: #666666;
+	font-size: 10px;
+    width: 37px;
+    height: 22px;
+
+}
+.rep_bottom input:hover, .rep_rep_bottom input:hover{
+	background-color: #efefef;
+}
+.rep_rep_top{
+	margin-bottom: 20px;
+}
+.secret{
+	height: 20px;
+    display: table;
+    margin-bottom: 7px;
+}
+.secret img{
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 7px;
+}
+.secret span{
+	color: #7f7f7f;
+	font-size: 12px;
+	display: table-cell;
+    vertical-align: middle;
+}
+.rep_write_wrap{
+	margin-bottom: 25px;
+}
+.rep_write{
+	height: 115px;
+	width:100%;
+
+}
+.rep_textarea textarea{
+	padding: 15px;
+	height:115px;
+	width:747px;
+	margin-right: 10px;
+	border:1px solid #cdb3cf;
+}
+.rep_submit input{
+	width:115px;
+	font-size: 15px;
+	color: #666666;
+	height:115px;
+	background-color: #fff;
+	border-radius: 2px;
+	border:1px solid #cdb3cf;
+}
+.rep_submit input:hover{
+	background-color: #efefef;
+}
+
+
+/** 글쓰기 **/
+.write_box{
+	border-top: 3px solid #092f19;
+	font-size: 14px;	
+	margin-top: 60px;
+}
+.write_row{
+	border-bottom: 2px solid #cbd3cf;
+	background-color: #fff;
+	width:100%;
+	overflow: auto;
+}
+.write_text{
+	width:120px;
+	color:#666666;
+	text-align: center;
+	padding: 23px 0;
+}
+.write_input{
+	padding:7px 0;
+	
+}
+.write_input input{
+	border:1px solid #cbd3cf;
+	border-radius: 2px;
+}
+.write_input input[type="text"]{
+	width:730px;
+	height:45px;
+	padding: 0 20px;
+}
+.write_text:nth-child(1){
+	height:60px;
+}
+.write_btn1, .write_btn2{
+	margin-top: 20px;
+	width:150px;
+	height:45px;
+	color: #fff;
+	border:0;
+	border-radius: 2px;
+}
+.write_btn_box{
+	text-align: center;
+}
+.write_btn1{
+	background-color: #092f19;
+	margin-right: 15px;
+}
+.write_btn2{
+	background-color: #9fa5a2;
+}
+.file_input{
+	position: relative;
+}
+.file_input label {
+    position:absolute;
+    cursor:pointer;
+    display:inline-block;
+    overflow:hidden;
+    width:135px;
+    height:45px;
+    background:#507250;
+    color:#fff;
+    text-align:center;
+    line-height:47px;
+    left: 410px;
+    border-radius: 2px;
+}
+.file_input label input {
+    position:absolute;
+    width:0;
+    height:0;
+    overflow:hidden;
+    display: none;
+}
+.file_input input[type=text] {
+    display:inline-block;
+    width:400px;
+    height:45px;
+    font-size:14px;
+    padding:0;
+    border:0;
+    border:1px solid #cbd3cf;
+    padding-left: 20px;
+}
+
+
+/**동문회보**/
+.magazine_box{
+	float: left;
+	margin-left: 120px;
+}
+.magazine_box:nth-child(1){
+	margin-left: 0;
+}
+.magazine_img{
+	width:200px;
+	height: 210px;
+	/*background-color: gray; */
+	border: 1px solid gray;
+
+}
+.magazine_text{
+	height:45px;
+	/*border-bottom: 1px solid #cbd3cf;*/
+	font-size: 14px;
+	color: #595959;
+	text-align: center;
+	line-height: 45px;
+}
+.table_row{
+	width:100%;
+	overflow: auto;
+	margin-bottom: 65px;
+}
+.table{
+	padding-top: 55px;
+}
+.magazine_btnBox{
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+.magazine_btn1{
+	width:100px;
+	height:40px;
+	border:0;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 13px;
+	background-color: #5a6166;
+}

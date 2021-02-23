@@ -1,0 +1,259 @@
+.pointer{
+	cursor: pointer;
+}
+.bg_img{
+	margin-right: 38px;
+	overflow: auto;
+	background-image: url(imgs/new_image/intro/img_background.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+	overflow: hidden; 
+}
+
+/** 사이드메뉴 **/
+.intro_sideMenu{
+	width:100%;
+	height:30px;
+	position: absolute;
+	z-index: 2;
+	left: 10px;
+}
+.intro_side_menu1{
+	top:23px;
+}
+.intro_side_menu2{
+	top:78px;
+}
+.intro_side_menu3{
+	top:134px;
+}
+.intro_side_menu4{
+	top:189px;
+}
+.intro_side_menu5{
+	top:246px;
+}
+.intro_side_menu6{
+	top:300px;
+}
+.intro_side_menu7{
+	top:350px;
+}
+
+/** 회장인사 **/
+.intro_wrap,.intro_menu_wrap,.intro_cont_wrap{
+	margin: 0 auto;
+}
+.intro_wrap{
+	width:1280px;
+	margin-top: 60px;
+	overflow: auto; 
+}
+.intro_menu_wrap{
+	width:214px;
+	float: left;
+	margin-left: 50px;
+	margin-right: 46px;
+	position: relative;
+}
+.intro_cont_wrap{
+	width: 932px;
+	float: left;
+	margin-bottom: 160px;
+}
+.intro_title{
+	width:100%;
+	height:66px;
+
+}
+.intro_cont1{
+	width:752px;
+	height:88px;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+}
+.intro_title_text1{
+	float: left;
+}
+.intro_title_text2{
+	float: right;
+	font-size: 12px;
+	color:#959b98;
+}
+.intro_title_map{
+	float: left;
+}
+.intro_title_arrow{
+	margin-left: 4px;
+	margin-right: 4px; 
+}
+.intro_title_map2, .intro_title_map3{
+	margin:4px 0;
+}
+
+
+/** 회칙 **/
+hr{
+	margin:0;
+	border: 0.5px solid #cbd3cf;
+}
+.hr_thick{
+	border: 1.5px solid #092f19;
+}
+.intro_rule_cont{
+	width:932px;
+	margin-top: 66px;
+}
+.rule_title{
+	margin-left: 40px;
+	color: #5b5b5b;
+	font-size: 15px;
+	height:56px;
+	line-height: 56px;
+}
+.rule_title span{
+	color: #092f19;
+	font-size: 18px;
+	margin-right: 20px;
+}
+.rule_content{
+	margin-left: 116px;
+	color: #3f3f3f;
+	font-size: 13px;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	line-height: 26px;
+	margin-right:116px;
+}
+
+
+/** 연혁 **/
+
+.intro_hist_year{
+	width:932px;
+	margin-top: 46px;
+	position: relative;
+}
+.history_years{
+	position: absolute;
+	width:80px;
+	height:30px;
+	top: 12px;
+}
+.history_years10{
+	left:27px;
+}
+.history_years00{
+	left:160px;
+}
+.history_years90{
+	left:294px;
+}
+.history_years80{
+	left:426px;
+}
+.history_years70{
+	left:559px;
+}
+.history_years60{
+	left:694px;
+}
+.history_years50{
+	left:827px;
+}
+.hist_cont_wrap{
+	margin-bottom: 28px;
+}
+.hist_cont_wrap, .hist_text_margin,.hist_cont_box,.intro_hist_cont{
+	overflow: auto;
+}
+.intro_hist_cont{
+	width:932px;
+	margin-top: 52px;
+	padding-left: 30px;
+}
+.hist_year, .hist_cont_box,.hist_month, .hist_text, .hist_cont_dot{
+	float: left;
+}
+.hist_cont_box{
+	width:785px;
+	line-height: 24px;
+	margin-bottom: 24px;
+	color:#666666;
+	font-size: 13px;
+	padding-top: 7px;
+}
+.hist_year{
+	color:#092f19;
+	font-size: 28px;
+	margin-right: 46px;
+}
+.hist_cont_dot{
+	margin-right: 8px;
+	padding-top: 2px;
+}
+.hist_month{
+	margin-right: 20px;
+}
+.hist_text{
+	width: 695px;
+}
+.hist_text_margin{
+	position: relative;
+}
+.line_dashed{
+	border-right: 1px dashed #cbd3cf; position: absolute;top: 15px; left: 6px; z-index: -1;
+}
+
+
+/** 조직도 **/
+.intro_group_cont{
+	margin-top: 60px;
+}
+
+
+/** 동문회관 **/
+.intro_map_cont{
+	margin-top: 60px;
+	height:400px;
+}
+.map_info_wrap{
+	margin-top: 55px;
+}
+.map_info, .map_info_title{
+	float: left;
+}
+.map_title{
+	margin-bottom: 12px;
+	font-size: 14px;
+	color:#555555;
+}
+.map_title img{
+	margin: -2px 10px -2px 0;
+}
+.map_info1{
+	width:42%;
+	line-height: 24px;
+}
+.map_info2{
+	width:45%;
+	line-height: 24px;
+}
+.map_info_title{
+	font-size: 13px;
+	color: #092f19;
+	margin-left: 24px;
+}
+.map_info_title1{
+	width:95px;
+}
+.map_info_title2{
+	width:165px;
+}
+.map_info_content{
+	margin-left: 24px;
+	font-size: 13px;
+	color: #666666;
+}
